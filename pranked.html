@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>gotcha</title>
+<style>
+  html, body {
+    margin: 0;
+    height: 100%;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    background: radial-gradient(circle at 50% 40%, #1e293b, #0f172a);
+    color: #f8fafc;
+    overflow: hidden;
+  }
+  .wrap {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 24px;
+  }
+  h1 {
+    font-size: clamp(48px, 10vw, 120px);
+    margin: 0;
+    letter-spacing: -2px;
+    animation: pop 0.6s cubic-bezier(.2,.9,.3,1.4) both;
+  }
+  p {
+    font-size: clamp(18px, 2.5vw, 28px);
+    margin-top: 16px;
+    color: #cbd5e1;
+    animation: fade 1s 0.4s both;
+  }
+  .emoji {
+    font-size: clamp(60px, 12vw, 140px);
+    margin-bottom: 10px;
+    display: inline-block;
+    animation: wiggle 1.2s ease-in-out infinite;
+  }
+  @keyframes pop {
+    0% { transform: scale(0.3); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+  @keyframes fade {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes wiggle {
+    0%, 100% { transform: rotate(-8deg); }
+    50% { transform: rotate(8deg); }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="emoji">🤡</div>
+    <h1>haha you've been pranked</h1>
+    <p>better luck next time</p>
+  </div>
+</body>
+</html>
